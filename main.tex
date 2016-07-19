@@ -1,0 +1,135 @@
+\documentclass{emulateapj}
+\usepackage{natbib}
+\bibliographystyle{apj}
+\usepackage{color}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\def\kepler{{\slshape Kepler}}
+\begin{document}
+
+\author{Sarah Ballard}
+\affil{Massachusetts Institute of Technology, Cambridge, MA 02139 USA}
+\and
+\author{John Moriarty}
+\affil{Massachusetts Institute of Technology, Cambridge, MA 02139 USA}
+
+
+
+\title{}
+\shorttitle{}
+
+\begin{abstract}
+
+\end{abstract}
+
+
+\section{Introduction}
+
+As evidenced by the huge number of close-in planets detected by \kepler, compact planetary systems are clearly an important product of the planet formation sequence. As many as half of all sun-like stars host at least one close-in planet \citep{Petigura13, Silburt15} and M dwarfs host, on average, 2.5 planets with periods shorter than 200 days \citep{Dressing15}.
+
+ A number of works have modeled the underlying architecture of these systems, typically using the observed multiplicity and transit duration ratios as constraints.
+ \citet{Fang12} found that the majority of systems consist of 1-2 planets with mutual inclinations less than 3 degrees. \citet{Lissauer11} found a best fit model of 3-4 planets with mean mutual inclinations of 2.5 degrees for systems showing more than one transiting planet. However, there was a strong degeneracy between mutual inclination and underlying multiplicity in their model. A follow up work, \citet{Fabrycky14}, included transit duration ratios in the analysis to constrain the mode of mutual inclinations to between 1.0 and 2.2 degrees. \citet{Lissauer11} did note that models that fit the 2+ multiplicity distribution well, significantly under-predicted the number of singly transiting systems, suggesting that a single-component model of compact planetary system architecture may not be adequate.
+
+ The apparent multi-modality of compact planetary system architecture, often referred to as the \kepler\ dichotomy, has since received further supporting evidence. \citet{Ballard14}, focussing on the sample of planetary systems around M dwarfs, constructed populations of synthetic systems with varying numbers of planets and a range of mutual inclinations. They found that a single component model with $\sim$6 planets with mutual inclinations of $\sim2^{\circ}$ well reproduced the 2+ multiplicity distribution, but again, significantly under-predicted the number of singly transiting planets, thus concluding that a second population of single planet systems (or multi-planet systems with large mutual inclinations) must exist. A similar result was found by \citet{Hansen13}, but using models of planetary systems based on N-body simulations of late-stage planet formation. \citet{Xie14} found another line of evidence that \kepler\ systems do not all have the same underlying architecture in the frequency of transit timing variations (TTVs). They found that the larger the observed number of planets in a system is, the more likely it will show TTVs, with systems of 4 or more transiting planets being 5 times as likely to exhibit TTVs than singly transiting systems. Additionally, \citet{Morton14} found that the stellar obliquity of planets in multiply transiting systems are systematically lower than for lone planets.
+
+ This \kepler\ dichotomy must arise either during the formation of the planetary systems or from later, long-term dynamical evolution. In the second camp, \citet{Pu15} and \citet{Volk15} suggest that the majority of systems form with many planets and are on the edge of stability. Using N-body simulations they find that a fraction of these systems will eventually undergo dynamical instability. Although they do not follow the evolution of systems beyond the instability, the presumed result is that planets are either ejected or collide to form systems with fewer planets. Another possibility is that the long-term evolution is not quite so cataclysmic, but that planetary systems can self-excite, pumping up the inclinations of the planets high enough that typically only one planet could be observed at any given time. However, \citet{Becker15} find that mutual inclinations are not spread significantly through self-excitation.
+
+ \citet{Moriarty15b}, proposed that the \kepler\ dichotomy originates during planet formation. \citet{Moriarty15b} found that variations in the surface density profile of the initial planetesimal disk lead to the formation of planetary systems with dramatically different architectures. In particular, disks with very steep surface density profiles tend to produce more planets with smaller mutual inclinations, whereas disks with shallower surface density profiles tend to produce fewer planets with larger mutual inclinations. A two-component mixture model (i.e. populations constructed by combining the simulated systems resulting from disks with two different sets of initial conditions) was able to match many of the observable characteristics of the \kepler\ systems, including the distribution of observed multiplicity, transit duration ratios, period ratios, periods and planet radii. Although \citet{Moriarty15b} showed that the \kepler\ dichotomy can result from the variation in the planet formation process it is not a complete solution to the problem. The question remains: What could lead to the variations in the surface density profile of planetesimal disks that are needed to form a large range in planetary system architecture?
+
+ The properties of planetesimal disks are not well constrained. Their structure is often connected to either the structure of the gas and dust portion of the protoplanetary disk or the smeared out surface density profile of planetary systems (i.e. the minimum mass extrasolar nebula), typically with the conclusion that they have a power law surface density profile and a power law index of about -1.5 \citep[e.g.][]{Weidenschilling77, Chiang13}. The connection of planetesimal disk structure to protoplanetary disk structure is probably tenuous because the formation of the planetesimal disk is both complicated (depending on the rates of planetesimal formation, growth, destruction and migration as a function of location in the disk) and protracted. Inferring the structure of the planetesimal disks from planetary systems is difficult due to the observational incompleteness for any given system. This problem can be avoided by using a large number of systems and correcting for incompleteness, but the resulting inferred disk profile is then the average of all those systems and says nothing about planetesimal disk variation.
+
+ \citet{Moriarty15} approached the question of planetesimal disk structure by modeling its formation. They found that the dominant mechanism of planetesimal disk growth, at least in the inner disk ($<$1AU) is the accretion of inward drifting pebbles (small $\sim$cm-sized bodies that form in the outer disk) onto existing planetesimals. The pattern of growth is from the inside out such that disks that are allowed to accrete more pebbles are much more extended (i.e. shallower surface density profiles) than disks that are allowed to accrete less. Thus the structure of the inner planetesimal disk depends on the mass of pebbles that have drifted into this region. Such variations in the total supply of pebbles are expected from variations in protoplanetary disk mass and metallicity. Furthermore, anything that interrupts the supply of pebbles, e.g. the formation of a giant planet, could also affect the structure of planetesimal disks.
+
+ In this work, we combine these two ideas (that variation in protoplanetary disks leads to variation in planetesimal disk structure and that variation in planetesimal disk structure leads to variation in planetary system architecture) into a single model of planet formation, where the observed variation in planetary systems can be explained by the expected variation in protoplanetary disk mass and/or metallicity.  To support this work, we compare the results of this model to the sample of planetary systems detected by \kepler.
+
+
+\section{Model Description}
+
+A planetesimal disk is a necessary prerequisite for most models of the final assembly of planets. The formation of this disk, however, is not well understood, mostly due to the uncertainties in how planetesimal formation occurs. \citet{Moriarty15} found that the formation of new planetesimals is not the dominant growth mechanism for planetesimal disks. Rather, it is the accretion of pebbles (that form in the outer disk and drift inward) onto existing planetesimals that contributes most significantly to the disk's growth. Therefore, the uncertainties regarding planetesimal formation do not necessarily pose a major problem to models of planetesimal disk formation. This reliance on pebbles as a source of mass is justified by both numerical simulations \citep[e.g.][]{Brauer08, Birnstiel10}, which show rapid growth of dust into pebbles followed by inward drift, and observations, which show that there is a significant amount of mass in pebble sized particles (mm-cm) in protoplanetary disks \citep[][and references therin]{Testi14}.
+
+The accretion of pebbles onto planetesimals tends to be a very efficient process. This is especially so in the inner disk where the volume density of both pebbles and planetesimals is higher. Because of this efficiency, only a small amount of mass in planetesimals is needed initially in order for planetesimal disk growth to become rapid. \citet{Moriarty15} found that the initial mass in and distribution of planetesimals has only limited effects on the surface density distribution of planetesimal disks formed by the end of their simulations. In fact, the only parameters in the model that had a large effect on the structure of the planetesimal disks that formed were the total protoplanetary disk mass and the duration of pebble accretion. These two parameters had basically the same effect on planetesimal disk structure and can be merged into a single more conceptually useful parameter: the total mass in pebbles delivered to the inner disk ($M_{peb}$). Anything that changes $M_{peb}$ (e.g. total protoplanetary disk mass, disk metallicity, duration of delivery) will lead to variation in the structure of the planetesimal disk.
+
+In this work, we use the range of planetesimal disk surface density profiles that form in the pebble accretion simulations to motivate the initial conditions of simulations of late stage planet assembly. Specifically, we create initial conditions to mimic the inside out growth of planetesimal disks. Inside out growth of planetesimal disks is not unique to the model presented in \citet{Moriarty15}. Thus, the results of this study may be applicable to other models of planet/planetesimal disk formation in which formation occurs in an inside out fashion \citep[e.g.][]{Chatterjee14}. In order to mimic the stages of planetesimal disk formation that would result from inside out growth, we construct disks with 4 different surface density profiles. The highest mass disk is described by a power-law surface density profile: $\Sigma = \Sigma_0 a^{\alpha}$. We choose $\alpha$ to be -0.5 \citep[][based roughly on the results of]{Moriarty15} and $\Sigma_0$ such that the total mass between 0.05 and 1 AU is 40 M$_{\oplus}$. Three lower mass disks are created by multiplying the surface density profile by 0.1 beyond some radial distance in the disk such that the total masses of the disks are 10, 20 and 30 M$_{\oplus}$. The lowest mass disk is the most centrally concentrated disk and as the mass increases the disks become more extended. 
+
+Similar to earlier works, we build off the results of simulations of runaway and oligarchic growth \citep[e.g.][]{Kokubo02}, allowing us to skip the computationally intensive steps of protoplanet formation. We populate each disk with protoplanets and planetesimals with masses and separations consistent with the results of \citet[][ protoplanet separations of $\sim$ 7 mutual hill radii]{Kokubo02} and with the surface density distributions defined above. Half the mass is contained in protoplanets and the other half in smaller bodies a tenth the mass of the protoplanets. For each planetesimal disk mass (or equivalently, surface density profile), we create 32 initializations of the planetesimal disk. We simulate the growth of these disks into planetary systems using the mercury N-body integrator \citep{Chambers99}. Each simulation is run for 10 million years with a time step of 0.2 days and collisions are assumed to result in perfect mergers.
+
+\section{Simulation Results}
+
+The planetary systems formed in the simulations exhibit a range of architectures. In general, they are consistent with the findings of \citetalias{Moriarty15}. That is, the lower mass disks, which correspond to steeper surface density profiles, produce more planets which tend to have smaller mutual inclinations and eccentricities. The higher mass disks (corresponding to shallower surface density profiles) produce fewer more massive planets with higher mutual inclinations and eccentricities. These trends can be seen in Figures \ref{MassVsSMA},  \ref{InclinationDistribution} and \ref{EccentricityDistribution}. The origin of these differences are discussed in more detail in \citetalias{Moriarty15}, which we refer the curious reader to. In the following section, we show how these differences in a system's intrinsic architecture are carried over to their observable characteristics.
+
+%\begin{figure}     % use ''figure*'' instead of ''figure'' if you want your figure to span both columns      % adjust this number to change the size of your figure
+%\hspace{-0.6cm}
+%\includegraphics[scale=0.43]{chapter5/MassVsSMA.eps}
+%\caption{Planet mass vs. semi-major axis of planets formed in simulations with different initial disk masses. More massive disks (shallower surface density profiles) tend to form fewer more massive planets.}
+%\label{MassVsSMA}
+%\end{figure}
+%
+%\begin{figure}     % use ''figure*'' instead of ''figure'' if you want your figure to span both columns      % adjust this number to change the size of your figure
+%\hspace{-1cm}
+%\includegraphics[scale=0.44]{chapter5/InclinationDistribution.eps}
+%\caption{Distribution of orbital inclinations of planets formed in simulations with different initial disk masses. More massive disks (shallower surface density profiles) tend to form planets with higher mutual inclinations.}
+%\label{InclinationDistribution}
+%\end{figure}
+%
+%\begin{figure}     % use ''figure*'' instead of ''figure'' if you want your figure to span both columns      % adjust this number to change the size of your figure
+%\hspace{-1cm}
+%\includegraphics[scale=0.44]{chapter5/EccentricityDistribution.eps}
+%\caption{Distribution of orbital eccentricities of planets formed in simulations with different initial disk masses. More massive disks (shallower surface density profiles) tend to form planets with higher mutual eccentricities.}
+%\label{EccentricityDistribution}
+%\end{figure}
+
+
+\section{Comparison with the Kepler Sample}
+
+
+
+ To make a direct comparison with the data, we ``observe'' each of our systems 10,000 times from different random viewing angles around each star in our sample. A planet is ``observed'' to transit if its impact parameter is less than 1 and a random uniform number between 0 and 1 is less than the probability of detection. The probability of detection is calculated using the completeness parameterization described in \citet{Burke15} and \citet{Christiansen15}. This parameterization uses a quantity called the multiple event statistic (MES), which measures the strength of a transit signal relative to the noise and can be calculated based on the properties of the star/observation and the planet. We calculate the specific dependence of the pipeline efficiency for our sample on the MES using the table of injected transits provided on the NASA Exoplanet Archive. Ideally, the MES completely parameterizes the detection probability (i.e. detection probability is a function of MES only). However, a change to the \kepler\ pipeline used for data release 24, introduced an additional dependency on orbital period. To mitigate this effect, we limit our analysis to transit signals with MES$>$15.
+
+ An important ingredient in determining the detection probability is the radius of the planet. Because the N-body simulations track the mass of planets but not the radius, the radius must be determined from a mass-radius relation. We make use of the probabilistic mass-radius relation presented in \citet{Wolfgang15b} for planets with masses greater than 2.13 Earth-masses (corresponding to 1.2 Earth-radii). For smaller planets we use the deterministic model presented in that paper. A deterministic mass-radius relation is more reasonable for smaller planets because the data do not rule it out and because the scatter in the probabilistic model is unphysical for small planets.
+
+ In order to evaluate how well our simulations match the observable characteristics of planetary systems, we compare them to the population of systems detected by \kepler. We selected a sample \kepler\ targets from the Q1-Q17 (data release 24) \kepler\ stellar catalog \citep{Huber14} on the NASA Exoplanet Archive \citep{Akeson13} using the following selection criteria: $4200K < T_{eff} < 6100K$ and $logg < 4$.   Additionally, the sample is restricted to stars with a data timespan greater than two years. This sample consists of 96,892 stars. With the MES threshold stated above (MES $>$ 15), our final sample consists of 95,378 stars showing zeros transiting planets, 1215 showing one, 198 showing two, 75 showing three, 22 showing four, 3 showing five and 1 showing six.
+
+
+ \subsection{Multiplicity Distribution}
+The observed multiplicity of a system depends upon a number of factors including the true multiplicity of the system, the mutual inclinations between planets, the sizes of planets and their semi major axes. Thus the observed multiplicity distribution can help to constrain many of these parameters. We can calculate the likelihood of a model given the observed multiplicity distribution as:
+\begin{equation}
+\mathcal{L} = \prod_{i=1}^N P(M=n_i|\theta),
+\end{equation}
+where the product is over each of the observed stars and the term $P(M=n_i|\theta)$ is the probability of detecting the observed number of planets for that star, $n_i$, given a model, $\theta$. These probabilities are determined from the mock observations of the systems produced in the N-body simulations and are simply calculated as the number of observations with $n_i$ transiting planets divided by the total number of observations.
+
+In practice, the probability of detecting a larger number of planets ($>$2) for a given model is often zero. This results because, 1. there are a finite number of mock observations, and therefore, very low probability occurrences will register as zero probability and 2. the model is incomplete and cannot explain all the data, thus it has zero probability of being correct. We already know that all models are incomplete in some respect and are more interested in which model is preferred by most of the data than which model can, in theory, explain all the data. To avoid these zero probability cases, we adjust the probability distribution slightly so that high multiplicity cases have some small but non-zero probability of occurring. We choose this probability to be 1 chance in a million. We choose this number because it is small enough to account for the fact that in a few hundred thousand mock observations (the total number for any given initial planetesimal disk setup) there could be no occurrences but it is not so small that a model that cannot explain a few high multiplicity systems is hugely penalized.
+
+ A major source of error in our model is due to the limited number of N-body simulations that are computationally feasible. This can lead to overfitting because the observed sample consists of nearly 100,000 stars, whereas our simulated sample is based off of 128 simulations. To account for this issue, we calculate a model's likelihood using N resampled sets of the 128 simulations.
+
+
+\section{Discussion}
+\label{discussion}
+
+\citet{Moriarty15} presented a model in which planetesimal disks are built from the accretion of inward drifting pebbles. Because this accretion proceeds from the inner most regions of the disk outwards, the extent of the accretion effects the final shape of the planetesimal surface density profile. Any variations in the total mass of pebbles delivered to the inner disk will result in variations in the planetesimal surface density profile. These variations in the planetesimal disk, in turn, affect the final architecture of the planetary systems that form from them. Thus, we suggest that the range of planetary system architectures implied by the \kepler\ sample are a consequence of expected variations in protoplanetary disks (e.g. total mass and metallicity).
+
+A comparison with the \kepler\ sample shows, that to first order, our model reproduces the observed characteristics of planetary systems well. 
+
+Some possible predictions/conclusions:
+
+\begin{itemize}
+
+\item Approximately 70-85\% of M dwarfs host planetary systems whereas only about 20-40\% of sun-like stars host planets.
+
+\item Metal-rich stars will, on average, produce more massive (and shallower) planetesimal disks. Therefore, the planets orbiting them should be more massive, more eccentric and more highly inclined and fewer of them will be observed to transit.
+
+\item More massive stars, which presumably have more massive protoplanetary disks \citep[e.g.][]{Andrews13} will tend to produce more massive planetesimal disks. Therefore, they should form systems of planets with higher mass, eccentricity and mutual inclinations. Consequently, fewer planets will be simultaneously observable by the transit technique.
+
+\item In systems that contain giant planets, the supply of pebbles to the inner disk may have been interrupted. In this case lower mass/steeper planetesimal disks would form or perhaps none would form at all, depending on the timing of giant planet formation vs. pebble delivery. The latter case may be a partial explanation of why higher mass stars show a lower occurrence rate of close in planets as they show a higher incidence of giant planets than M-dwarfs.
+
+\end{itemize}
+
+
+\bibliography{mybib}
+
+
+
+
+\end{document}
+
+
+
